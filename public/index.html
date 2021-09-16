@@ -23,7 +23,7 @@
         return {
           a: 1,
           b: 2,
-          at_property: "8757f595-1143-b75b-c7c8-111fc7a4cc6d",
+          "at_property": "b25ea20c-3cb5-188a-0f3c-666e11d005b7",
           profile: {
             test: "test",
             country: {
@@ -34,7 +34,23 @@
       };
     </script>
     <!--/targetPageParams()-->
-    <script src="%PUBLIC_URL%/scripts/at-taasqa1-spa.js"></script>
+    <!--script src="%PUBLIC_URL%/scripts/at-taasqa1-spa.js"></script-->
+    <script>
+      !function(n,o){o.forEach(function(o){n[o]||((n.__alloyNS=n.__alloyNS||
+              []).push(o),n[o]=function(){var u=arguments;return new Promise(
+              function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
+      (window,["alloy"]);
+
+      alloy("configure", {
+        "edgeConfigId": "46273862-a550-47d1-931e-cfb960588f04",
+        "orgId":"011B56B451AE49A90A490D4D@AdobeOrg"
+      });
+
+      alloy("sendEvent",{
+        "renderDecisions": true
+      });
+    </script>
+    <script src="%PUBLIC_URL%/scripts/alloy.js"></script>
 
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Target SPA website" />

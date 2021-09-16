@@ -67,3 +67,27 @@ const Target = createTargetComponent(React);
  Default mbox content
 </Target>
 ```
+
+## Only for setting up alloy.js
+Add the following code in index.html- replace:
+ - edgeConfigId with the prod environment id from the data stream that you create
+ - orgId - with the IMS orgID
+```
+<script>
+!function(n,o){o.forEach(function(o){n[o]||((n.__alloyNS=n.__alloyNS||
+[]).push(o),n[o]=function(){var u=arguments;return new Promise(
+function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
+(window,["alloy"]);
+
+alloy("configure", {
+"edgeConfigId": "957ccad2-cbd4-4382-a23a-ece8327955fc",
+"orgId":"xxxxxx@AdobeOrg"
+});
+
+alloy("sendEvent",{
+"renderDecisions": true
+});
+</script>
+
+<script type="text/javascript" src="assets/js/alloy.js"></script>
+```
